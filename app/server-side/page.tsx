@@ -9,11 +9,9 @@ interface IBook {
   available: boolean;
 }
 
-const page = async () => {
+const Page = async () => {
   try {
-    const response = await fetch("https://simple-books-api.glitch.me/books/", {
-      cache: "no-store"
-    });
+    const response = await fetch("https://simple-books-api.glitch.me/books/");
     const data: IBook[] = await response.json();
 
     return (
@@ -39,4 +37,4 @@ const page = async () => {
   }
 };
 
-export default page;
+export default Page;

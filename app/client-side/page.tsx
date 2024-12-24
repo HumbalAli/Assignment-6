@@ -16,7 +16,7 @@ interface IProduct {
     count: number;
   };
 }
-const page = () => {
+const Page = () => {
   const [data, setData] = useState<IProduct[]>([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -60,4 +60,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
